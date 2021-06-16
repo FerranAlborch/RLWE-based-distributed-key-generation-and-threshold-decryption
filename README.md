@@ -1,1 +1,1 @@
-# RLWE-based-distributed-key-generation-and-threshold-decryption
+# RLWE based distributed Key Generation and Threshold Decryption
