@@ -5,3 +5,33 @@ This is a repository created to store all relevant codes deriving from the Maste
 We will go through what each main simulation, how to use it and any perks or problems it may have.
 
 ## Protocol simulation (decryption_sim.c, functions.c, functions.h, keygen_sim.c)
+
+### Libraries needed
+
+### Changeable parameters
+
+### Execution
+
+### Issues
+
+## Simulation automatization (test.py)
+
+### Changeable parameters
+
+### Execution
+
+## RLWE estimator (RLWE estimator.ipynb, estimator.py)
+
+### Changeable parameters
+
+### Execution
+
+## Result processing and graphics (graphics.R)
+
+### Changeable parameters
+
+### Execution
+
+
+
+
