@@ -27,29 +27,49 @@ To execute the Key Generation simulation the following commands are needed:
 gcc keygen_sim.c functions.c -lm -lgmp -lssl -lcrypto -lflint -lmpfr -o keygen.out -O2
 ./keygen.out n u t
 ```
-Where n, u, t are the values you want to give to these parameters.
+Where n, u, t are the non-negative integer values you want to give to these parameters.
 
 To execute the Decryption simulation the following commands are needed
 ```
 gcc decryption_sim.c functions.c -lm -lgmp -lssl -lcrypto -lflint -lmpfr -o decrypt.out -O2
 ./decrypt.out n u t
 ```
-Where once again n, u, t are the values you want to give to these parameters.
+Where once again n, u, t are the non-negative integer values you want to give to these parameters.
+
 ### Issues and recommendations
+
+There is a slight issue with some FLINT functions which we have not been able to clear completely yet, so there is a slight leak of storage when iterating within the .c code. Therefore we would highly recommend using small values for repetitions and using our python script as we have done.
 
 ## Simulation automatization (test.py)
 
+Given the slight issues we had with memory storage and the fact that we needed to simulate a lot of different cases we created this pyhton script to help us.
+
 ### Changeable parameters
 
+This script allows for any range of n and t and any relation between t and u. The most used by us are u = 3t+1, u = 2t+2 and u = t+1. Once again beware of using very big t or u since those values will probably require too much time or storage.
+
 ### Execution
+
+To execute the automated simulation the following command is needed:
+```
+python test.py
+```
 
 ## RLWE estimator (RLWE estimator.ipynb, estimator.py)
 
+This is a short sagemath code we have written to use the LWE estimator given by Albrecht et al. [here](https://bitbucket.org/malb/lwe-estimator/src/master/).
+
 ### Changeable parameters
+
+The code allows for any range of n, q and alpha.
 
 ### Execution
 
+To execute it we used jupyter notebook.
+
 ## Result processing and graphics (graphics.R)
+
+
 
 ### Changeable parameters
 
