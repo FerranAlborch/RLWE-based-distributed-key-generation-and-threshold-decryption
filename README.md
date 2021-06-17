@@ -1,6 +1,6 @@
 # RLWE based distributed Key Generation and Threshold Decryption
 
-This is a repository created to store all relevant codes deriving from the Master's Degree Thesis "RLWE based distributed Key Generation and Threshold Decryption" by Ferran Alborch Escobar and supervised by Ramiro Martínez Pinilla and Paz Morillo Bosch made within the Master in Advanced Mathematics and Mathematical Engineering in the Universitat Politècnica de Catalunya.
+This is a repository created to store all relevant codes deriving from the Master's Degree Thesis "RLWE based distributed Key Generation and Threshold Decryption" by Ferran Alborch Escobar and supervised by Ramiro Martínez Pinilla and Paz Morillo Bosch made within the Master in Advanced Mathematics and Mathematical Engineering in the Universitat Politècnica de Catalunya in the year 2021.
 
 We will go through what each main simulation, how to use it and any perks or problems it may have.
 
@@ -18,8 +18,23 @@ For these simulations to be able to run in a computer it must have the following
 
 ### Changeable parameters
 
+The only changeable parameters in these codes are the modulo q found in line 228 in decryption_sim.c and in line 949 in keygen_sim.c and how many repetitions are made of every simulation inside one execution. This is found in line 231 in decryption_sim.c and in line 952 in keygen_sim.c
+
 ### Execution
 
+To execute the Key Generation simulation the following commands are needed:
+```
+gcc keygen_sim.c functions.c -lm -lgmp -lssl -lcrypto -lflint -lmpfr -o keygen.out -O2
+./keygen.out n u t
+```
+Where n, u, t are the values you want to give to these parameters.
+
+To execute the Decryption simulation the following commands are needed
+```
+gcc decryption_sim.c functions.c -lm -lgmp -lssl -lcrypto -lflint -lmpfr -o decrypt.out -O2
+./decrypt.out n u t
+```
+Where once again n, u, t are the values you want to give to these parameters.
 ### Issues and recommendations
 
 ## Simulation automatization (test.py)
