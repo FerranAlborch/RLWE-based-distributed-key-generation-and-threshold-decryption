@@ -69,12 +69,15 @@ To execute it we used jupyter notebook.
 
 ## Result processing and graphics (graphics.R)
 
-
+This R code is used to take the raw .csv data output by the simulations and then getting an average time and plotting graphics.
 
 ### Changeable parameters
 
+The only thing changeable (and must be changed) is by making sure the .csv files imported are the ones you want at every moment.
+
 ### Execution
 
+To execute it we used RStudio.
 
 
 
