@@ -6,13 +6,21 @@ We will go through what each main simulation, how to use it and any perks or pro
 
 ## Protocol simulation (decryption_sim.c, functions.c, functions.h, keygen_sim.c)
 
+These files contain the codes for the simulation of both protocols. The file decryption_sim.c contains the decryption simulation, keygen_sim.c contains the key generation simulation and functions.c contains functions used in both simulations.
+
 ### Libraries needed
+
+For these simulations to be able to run in a computer it must have the following libraries installed:
+- FLINT (Fast Library for Number Theory), found [here](https://www.flintlib.org/downloads.html). The version used is 2.7.1. FLINT requires two other libraries:
+  - GMP, found [here](https://gmplib.org/). The version used is 6.2.1.
+  - MPFR, found [here](https://www.mpfr.org/). The version used is 4.1.0.
+- OpenSSL, found [here](https://www.openssl.org/). The version used is 1.1.1.
 
 ### Changeable parameters
 
 ### Execution
 
-### Issues
+### Issues and recommendations
 
 ## Simulation automatization (test.py)
 
