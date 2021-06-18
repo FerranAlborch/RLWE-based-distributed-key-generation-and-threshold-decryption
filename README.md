@@ -38,7 +38,7 @@ Where once again n, u, t are the non-negative integer values you want to give to
 
 ### Issues and recommendations
 
-There is a slight issue with some FLINT functions which we have not been able to clear completely yet, so there is a slight leak of storage when iterating within the .c code. Therefore we would highly recommend using small values for repetitions and using our python script as we have done.
+There are a few issues with some FLINT functions which we have not been able to clear completely yet, so there is a slight leak of storage when iterating within the .c code. Therefore we would highly recommend using small values for repetitions and using our python script as we have done.
 
 ## Simulation automatization (test.py)
 
